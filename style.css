@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #202124;
+  color:rgb(239, 234, 236) ;
+}
+.container {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.logo {
+  max-width: 500px;
+  width: 100%;
+}
+.search-menu{
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  margin-top: 24px;
+  border: 2px solid #5f6368;
+  border-radius: 40px;
+}
+.search-bar:hover,
+.search-bar:focus-within
+{
+  background-color: #303134;
+  border-color: #303134;
+  box-shadow: 0 0 4px 2px #1f2022;
+}
+.search-bar:focus-within {
+ border-radius: 32px 32px 0 0;
+}
+.search-icon,
+.close-icon {
+  width: 20px;
+}
+.close-icon{
+  display: none;
+}
+.search-bar:focus-within .close-icon{
+  display: block;
+}
+
+.search-bar input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  color: inherit;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+.suggetion-menu{
+  background-color: #303134;
+  box-shadow: 0 6px 4px 2px #1f2022;
+  border-radius: 0 0 32px 32px;
+  padding: 16px 0 24px;
+  display: none;
+  position: absolute;
+ 
+  width: 100%;
+}
+
+.top-border{
+   border-top: 1px solid #5f6368;
+   margin-inline:24px;
+   margin-bottom: 8px;
+}
+.suggetion-menu p{
+  margin: 0;
+  padding: 8px 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+.search-bar:focus-within + .suggetion-menu{
+  display: block;
+}
+.suggetion-menu p:hover{
+  background-color: #3c4043;
+}
+.shapes{
+  position: fixed;
+  right: 30px;
+  bottom: 0;
+}
+.btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 30px;
+  font-size: 18px;
+}
+.btns button{
+  padding: 8px 24px; 
+  color: white;
+  background-color:#3c4043;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition:   border 0.2s ease-in-out;
+}
+
+.btns button:hover{
+  border:1px solid #5f6368;
+}
